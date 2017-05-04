@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'home/index.css' %}" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lobster" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="header" style="margin-top: -18px;height: 140px;">
+
+            </div>
+
+    </div>
+
+      &nbsp;
+    &nbsp;
+           <div class="row" style="z-index: 1900;">
+               <div class="col-md-6" style="z-index:1900;">
+                   <div class="container-fluid">
+                   <div class="section">
+        <div class="left" style="width: 100%;z-index: 1900;">
+            <img src="{% static 'home/images/zeimusu-Thumbtack-note-blank.png' %}" style="margin-top:-140px;width:300px;height: 200px;z-index: 2000;">
+
+         <h1 style="transform:rotateZ(-10deg);margin-top:-170px;margin-left:15px;padding-left:50px;z-index:2100;font-family: 'Lobster', cursive;font-size:50px;">GetEssay</h1>
+<img src="{% static 'home/images/icon-content-1.png' %}" style="margin-top:100px;width:200px;height: 200px;z-index: 2000;">
+            <h2 style="margin-top:-120px;padding-left:250px;font-family: 'Permanent Marker', cursive;font-size: 40px;">Get any type of essays you need..!!</h2>
+             <h2 style="margin-top:150px;padding-left:50px;font-family: 'Permanent Marker', cursive;font-size: 40px;">In No Time..!!</h2>
+          <img src="{% static 'home/images/time.png' %}" style="margin-top:-120px;margin-left:350px;width:200px;height: 200px;z-index: 2000;">
+
+        </div>
+
+        </div>
+                   </div>
+               </div>
+               <div class="col-md-6">
+                   <div class="left" style="width: 100%;" >
+                       &nbsp;
+                       &nbsp;
+                       <div class="row" style="padding-left: 30px;padding-right: 30px;">
+                           <br>
+                           <br>
+                           <br>
+                           <form action="{% url 'home:essaysuc'%}#result" method="post">
+					     {% csrf_token %}
+                             {{ form }}
+
+                           <br>
+                               <br>
+                               <br>
+
+                   <button style="margin-left: 220px;" type="submit" class="btn btn-primary">Go..</button>
+                   </form>
+                       </div>
+
+        </div>
+               </div>
+           </div>
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6" style="padding-bottom: 25px">
+            <div id="result" class="left" style="width: 100%;overflow: auto;overflow-x: hidden;text-align: center;  " >
+                       &nbsp;
+                       &nbsp;
+                <h2 style="font-family: 'Permanent Marker', cursive;font-size: 40px;text-align: center;">Essay</h2>
+                       <div class="row" style="padding-left: 30px;padding-right: 30px;">
+                           <br>
+                           <br>
+                           <br>{{ essay }}
+
+                       </div>
+
+        </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+    </div>
+
+
+
+
+
+       </div>
+
+
+
+
+</body>
+</html>
